@@ -44,3 +44,50 @@
         transform: scaleX(1);
     }
 }
+
+@keyframes focusBoxShadow {
+    from {
+        box-shadow: 0 0 0 0 var(--text-color);
+    }
+    to {
+        box-shadow: 2px 2px 0 0 var(--text-color);
+    }
+}
+
+@keyframes buttonHoverEffect {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes heartFocus {
+    from {
+        border: 0px solid var(--text-color);
+    }
+    to {
+        border: 2px solid var(--text-color);
+    }
+}
+
+@keyframes heartScale {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.5;
+    }
+}
+
+@keyframes heartSparks {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
