@@ -40,6 +40,12 @@
   gap: 20px;
 }
 
+@media (width <= 783px) {
+  .header {
+    margin: 100px 0 0 0;
+  }
+}
+
 /* Заголовки в шапке */
 
 .header__title-box {
@@ -123,6 +129,12 @@
   background-color: var(--bg-color);
   box-shadow: var(--block-shadow);
   font-size: 18px;
+}
+
+@media (width <= 783px) {
+  .main {
+    margin: 100px 0 0 0;
+  }
 }
 
 .card {
@@ -319,11 +331,17 @@
   animation: heartSparks 0.3s ease-in 0.3s 1 alternate;
 }
 
-/* СОХРАНИТЬ НА ПАМЯТЬ FOOTER */
+/* FOOTER СОХРАНИТЬ НА ПАМЯТЬ */
 .footer {
   width: 23.263889%;
   margin: 52px auto 103px auto;
   border: transparent;
+}
+
+@media (width <= 783px) {
+  .footer {
+    width: 81.6%;
+  }
 }
 
 .footer__button {
@@ -332,10 +350,16 @@
   align-items: center;
   position: relative;
   width: 100%;
-  padding: 15px 19px 15px 19px;
+  padding: 15px 18px 15px 18px;
   font-size: 14px;
   background-color: var(--bg-color);
   border: var(--block-border);
+}
+
+@media (width <= 783px) {
+  .footer__button {
+    flex-direction: column;
+  }
 }
 
 /* Окно DIALOG */
@@ -347,6 +371,12 @@
   background-color: var(--bg-color);
   border: var(--block-border);
   color: var(--text-color);
+}
+
+@media (width <= 783px) {
+  .dialog__window {
+    width: 90.9333333%;
+  }
 }
 
 .dialog__window-box {
@@ -375,6 +405,3 @@
   background-color: transparent;
   border: var(--block-border);
 }
-
-
-
