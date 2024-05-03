@@ -343,10 +343,21 @@
 .dialog__window {
   width: 24.5138889%;
   padding: 30px;
+  font-family: var(--header-font);
+  background-color: var(--bg-color);
+  border: var(--block-border);
+  color: var(--text-color);
+}
+
+.dialog__window-box {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  font-family: var(--header-font);
+}
+
+.dialog__window-box-text {
+  display: flex;
+  gap: 20px;
 }
 
 .dialog__window::backdrop {
@@ -359,7 +370,11 @@
 }
 
 .dialog__window-button {
+  width: 100%;
   padding: 9px 17px;
   background-color: transparent;
   border: var(--block-border);
 }
+
+
+

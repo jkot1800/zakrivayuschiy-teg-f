@@ -114,13 +114,21 @@
         <use href="svg/floppy.svg#floppy" >
       </svg>
         <span class="button__text">Сохранить на память</span>
-      </button>
+    </button> 
     </footer>
     <dialog id="dialog-id" class="dialog__window">
-      <p class="dialog__window-text">Вставьте дискету, чтобы продолжить</p>
-      <button type="submit" class="dialog__window-button uppercase">ок</button>
+      <div class="dialog__window-box">
+        <div class="dialog__window-box-text">
+          <svg fill="currentColor" stroke="currentColor" width="95" viewBox="0 0 21 21" class="floppy-dialog">
+            <use href="svg/floppy.svg#floppy" >
+          </svg>
+          <p class="dialog__window-text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <form method="dialog" class="dialog__window-button-form">
+          <button type="submit" class="dialog__window-button uppercase">ок</button>
+        </form>
+      </div>
     </dialog>   
-    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
