@@ -104,9 +104,23 @@
         </div>
       </div>
     </main>
-    <footer>
-      
+    <footer class="footer">
+      <button class="footer__button"
+      type="button"
+      onclick="window['dialog-id'].showModal()" 
+      aria-controls="dialog-id"
+      >
+      <svg fill="currentColor" stroke="currentColor" width="21" viewBox="0 0 21 21" class="floppy">
+        <use href="svg/floppy.svg#floppy" >
+      </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
     </footer>
+    <dialog id="dialog-id" class="dialog__window">
+      <p class="dialog__window-text">Вставьте дискету, чтобы продолжить</p>
+      <button type="submit" class="dialog__window-button uppercase">ок</button>
+    </dialog>   
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
