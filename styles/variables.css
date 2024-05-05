@@ -16,12 +16,11 @@
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 
+  --button-text-color: rgba(255, 255, 255, 1);
+  --block-border: 2px solid black;
+  --block-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  --font-weight-paragraph: 400;
+  --font-weight-card-title: 700;
 
-    --button-text-color: rgba(255, 255, 255, 1);
-    --block-border: 2px solid black;
-    --block-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    --font-weight-paragraph: 400;
-    --font-weight-card-title: 700;
-
-    --red-heart: red;
+  --red-heart: red;
 }
