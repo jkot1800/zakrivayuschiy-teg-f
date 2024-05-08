@@ -22,6 +22,7 @@
   background-color: var(--bg-color);
   background-image: var(--bg-gradient);
   background-size: cover;
+  background-attachment: fixed;
   color: var(--text-color);
 }
 
@@ -63,6 +64,10 @@
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
+.header__title:focus {
+  outline: none;
+}
+
 .header__sub-title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
@@ -81,6 +86,8 @@
   border: transparent;
   text-transform: uppercase;
   font-size: 14px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:disabled {
@@ -92,24 +99,32 @@
   outline: none;
 }
 
-.theme-menu__button:focus-visible::before {
+/* Псевдоэелемент для кнопки меню при фокусе */
+
+.theme-menu__button::after {
   content: "";
   position: absolute;
   top: 2px;
-  display: block;
   width: 86%;
   height: 100%;
   border-bottom: 3px solid var(--text-color);
-  animation: scaleFocus 0.3s ease forwards;
+  display: block;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
   transform-origin: left;
+} 
+
+.theme-menu__button:focus-visible:after {
+  transform: scaleX(1);
 }
+
 
 /* Анимация Ховера при наведении на кнопку */
 
 .theme-menu__button:hover,
 .theme-menu__button:disabled,
 .theme-menu__button:focus-visible {
-  animation: buttonHoverOpacity 0.3s ease forwards;
+  opacity: 0.6;
 }
 
 /* Стрелочка около кнопки и ее анимация */
@@ -117,7 +132,7 @@
   content: "▶";
   position: absolute;
   left: -15px;
-  animation: arrowTranslate 0.5s infinite ease-in-out;
+  animation: arrowTranslate 0.5s infinite alternate;
 }
 
 /* MAIN */
@@ -153,7 +168,7 @@
   border-bottom: var(--block-border);
 }
 
-.card__title-box h3 {
+.card__title-box h2 {
   font-variation-settings: "wght" var(--font-weight-card-title);
   font-size: 18px;
   font-weight: bold;
@@ -169,6 +184,8 @@
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: fill;
+  object-position: center;
 }
 
 /* Лэйбл на изображении */
@@ -219,6 +236,7 @@
   height: 38px;
   background-color: transparent;
   border: none;
+  transition: border 0.3s ease;
 }
 
 /* focus */
@@ -228,7 +246,7 @@
 }
 
 .card__icon-button:focus-visible {
-  animation: heartFocus 0.3s ease forwards;
+  border: 2px solid var(--text-color);
 }
 
 /* конец кода сердечка */
@@ -339,7 +357,7 @@
 
 /* FOOTER СОХРАНИТЬ НА ПАМЯТЬ */
 .footer {
-  width: 23.263889%;
+  width: 48.2857143%;
   margin: 52px auto 103px auto;
   border: transparent;
 }
