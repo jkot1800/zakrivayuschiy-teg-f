@@ -27,24 +27,6 @@
     }
 }
 
-@keyframes focusBoxShadow {
-    from {
-        box-shadow: 0 0 0 0 var(--text-color);
-    }
-    to {
-        box-shadow: 2px 2px 0 0 var(--text-color);
-    }
-}
-
-@keyframes buttonHoverEffect {
-    from {
-        transform: scaleX(0);
-    }
-    to {
-        transform: scaleX(1);
-    }
-}
-
 @keyframes heartScale {
     from {
         scale: 1;
