@@ -34,7 +34,7 @@
   background-color: var(--bg-color);
   box-shadow: var(--block-shadow);
   padding: 136px 0 22px 0;
-  font-family: var(--header-font), serif;
+  font-family: var(--header-font), "fantasy", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,12 +112,11 @@
   transform: scaleX(0);
   transition: transform 0.3s ease;
   transform-origin: left;
-} 
+}
 
 .theme-menu__button:focus-visible:after {
   transform: scaleX(1);
 }
-
 
 /* Анимация Ховера при наведении на кнопку */
 
@@ -132,7 +131,7 @@
   content: "▶";
   position: absolute;
   left: -15px;
-  animation: arrowTranslate 0.5s infinite alternate;
+  animation: arrowTranslate 0.5s ease-in-out infinite alternate;
 }
 
 /* MAIN */
@@ -140,7 +139,7 @@
   margin: 100px 25.694% 0 25.694%;
   display: flex;
   flex-direction: column;
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
 }
 
@@ -191,7 +190,7 @@
 /* Лэйбл на изображении */
 .card__img-label {
   position: absolute;
-  font-family: var(--header-font);
+  font-family: var(--header-font), "fantasy", sans-serif;
   font-size: 14px;
   top: 23px;
   right: 25px;
@@ -237,6 +236,9 @@
   background-color: transparent;
   border: none;
   transition: border 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* focus */
@@ -281,7 +283,7 @@
   z-index: 2;
   mix-blend-mode: difference;
   color: var(--button-text-color);
-  font-family: var(--header-font), sans-serif;
+  font-family: var(--header-font), "fantasy", sans-serif;
 }
 
 .button__focus-decor::before {
@@ -308,31 +310,40 @@
 }
 
 .like-icon .core {
-  transition: fill 0.3s linear;
+  transition: fill 0.3s linear 0.03s;
   fill: var(--bg-color);
 }
 
 .like-icon .main-body {
-  transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s linear;
   fill: var(--bg-color);
+}
+
+.like-icon .contour {
+  transition: fill 0.1s linear;
+  fill: var(--text-color);
 }
 
 /* Hover */
 
 .like-icon:hover .core {
+  transition: fill 0.3s linear;
   fill: var(--text-color);
 }
 
 .like-icon:hover .main-body {
+  transition: fill 0.3s linear 0.05s;
   fill: var(--text-color);
 }
 
 /* Active */
 .like-icon:active .core {
+  transition: fill 0.3s linear;
   fill: var(--red-heart);
 }
 
 .like-icon:active .main-body {
+  transition: fill 0.3s linear 0.05s;
   fill: var(--red-heart);
 }
 /* click */
@@ -377,6 +388,7 @@
   display: flex;
   gap: 6px;
   align-items: center;
+  justify-content: center;
   position: relative;
   width: 100%;
   padding: 15px 18px 15px 18px;
@@ -396,7 +408,7 @@
 .dialog__window {
   width: 24.5138889%;
   padding: 30px;
-  font-family: var(--header-font);
+  font-family: var(--header-font), "fantasy", sans-serif;
   background-color: var(--bg-color);
   border: var(--block-border);
   color: var(--text-color);
