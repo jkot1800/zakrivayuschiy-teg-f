@@ -384,6 +384,7 @@
 /* FOOTER СОХРАНИТЬ НА ПАМЯТЬ */
 .footer {
   width: 48.2857143%;
+  min-inline-size: 306px;
   margin: 52px auto 103px auto;
   border: transparent;
 }
@@ -425,6 +426,7 @@
 
 .dialog__window {
   width: 24.5138889%;
+  min-inline-size: 341px;
   padding: 30px;
   font-family: var(--header-font), fantasy, sans-serif;
   background-color: var(--bg-color);
